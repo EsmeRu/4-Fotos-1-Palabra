@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">4 Fotos 1 Palabra</string>
+    <string name="imageitem1">imageItem1</string>
+    <string name="imageitem2">imageItem2</string>
+    <string name="imageitem3">imageItem3</string>
+    <string name="imageitem4">imageItem4</string>
 </resources>
