@@ -45,7 +45,8 @@
                     android:contentDescription="@string/imageitem1"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    app:srcCompat="@mipmap/mascota1_foreground" />
+                    app:srcCompat="@mipmap/mascota1_foreground"
+                    tools:ignore="ImageContrastCheck" />
 
                 <ImageView
                     android:id="@+id/image2"
