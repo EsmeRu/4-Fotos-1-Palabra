@@ -1,0 +1,84 @@
+{
+  "niveles": [
+    {
+      "nivel": "1",
+      "respuesta": "ANIMAL",
+      "imagen1": "nivel1_1.png",
+      "imagen2": "nivel1_2.png",
+      "imagen3": "nivel1_3.png",
+      "imagen4": "nivel1_4.png"
+    },
+    {
+      "nivel": "2",
+      "respuesta": "AFECTO",
+      "imagen1": "nivel2_1.png",
+      "imagen2": "nivel2_2.png",
+      "imagen3": "nivel2_3.png",
+      "imagen4": "nivel2_4.png"
+    },
+    {
+      "nivel": "3",
+      "respuesta": "AURORA",
+      "imagen1": "nivel3_1.png",
+      "imagen2": "nivel3_2.png",
+      "imagen3": "nivel3_3.png",
+      "imagen4": "nivel3_4.png"
+    },
+    {
+      "nivel": "4",
+      "respuesta": "BRAZOS",
+      "imagen1": "nivel4_1.png",
+      "imagen2": "nivel4_2.png",
+      "imagen3": "nivel4_3.png",
+      "imagen4": "nivel4_4.png"
+    },
+    {
+      "nivel": "5",
+      "respuesta": "CINCEL",
+      "imagen1": "nivel5_1.png",
+      "imagen2": "nivel5_2.png",
+      "imagen3": "nivel5_3.png",
+      "imagen4": "nivel5_4.png"
+    },
+    {
+      "nivel": "6",
+      "respuesta": "ERUCTO",
+      "imagen1": "nivel6_1.png",
+      "imagen2": "nivel6_2.png",
+      "imagen3": "nivel6_3.png",
+      "imagen4": "nivel6_4.png"
+    },
+    {
+      "nivel": "7",
+      "respuesta": "FARAON",
+      "imagen1": "nivel7_1.png",
+      "imagen2": "nivel7_2.png",
+      "imagen3": "nivel7_3.png",
+      "imagen4": "nivel7_4.png"
+    },
+    {
+      "nivel": "8",
+      "respuesta": "HELICE",
+      "imagen1": "nivel8_1.png",
+      "imagen2": "nivel8_2.png",
+      "imagen3": "nivel8_3.png",
+      "imagen4": "nivel8_4.png"
+    },
+    {
+      "nivel": "9",
+      "respuesta": "HOCICO",
+      "imagen1": "nivel9_1.png",
+      "imagen2": "nivel9_2.png",
+      "imagen3": "nivel9_3.png",
+      "imagen4": "nivel9_4.png"
+    },
+    {
+      "nivel": "10",
+      "respuesta": "TOSTAR",
+      "imagen1": "nivel10_1.png",
+      "imagen2": "nivel10_2.png",
+      "imagen3": "nivel10_3.png",
+      "imagen4": "nivel10_4.png"
+    }
+  ]
+}
