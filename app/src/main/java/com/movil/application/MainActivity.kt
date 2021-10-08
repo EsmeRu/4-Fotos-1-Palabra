@@ -2,15 +2,15 @@ package com.movil.application
 
 import android.content.DialogInterface
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
-import java.io.IOException
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
+import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
@@ -100,14 +100,12 @@ class MainActivity : AppCompatActivity() {
             .setMessage("Has encontrado la palabra correcta")
             .setPositiveButton(android.R.string.yes, DialogInterface.OnClickListener { dialog, which ->
                 //TODO: Implementar el cambio de niveles
-                var draw = "R.drawable."
-
                 nivelActual+=1;
-                imgUpLeft?.setImageURI(Uri.parse(draw + (dataNiveles.niveles[nivelActual].imagen1)))
-                imgUpRigth?.setImageResource(R.drawable.nivel2_2)
-                imgDownLeft?.setImageResource(R.drawable.nivel2_3)
-                imgDownRigth?.setImageResource(R.drawable.nivel2_4)
 
+                imgUpLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen1)))
+                imgUpRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen2)))
+                imgDownLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen3)))
+                imgDownRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen4)))
 
             })
             .show()
