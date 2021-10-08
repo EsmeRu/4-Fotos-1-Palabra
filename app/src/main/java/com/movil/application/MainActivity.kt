@@ -1,11 +1,13 @@
-package com.movil.application //comentario pa ver si ya jala git
+package com.movil.application
 
 import android.content.DialogInterface
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import java.io.IOException
 import com.google.gson.Gson
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnPresionado: Button
     private lateinit var btnBorrar: Button
     private lateinit var btnSiguienteLetraRespuesta: Button
+    private var imgUpLeft: ImageView? = null
+    private var imgUpRigth: ImageView? = null
+    private var imgDownLeft: ImageView? = null
+    private var imgDownRigth: ImageView? = null
     private var btnPresionados: ArrayList<Button> = ArrayList()
     private var btnRespuestas: ArrayList<Button> = ArrayList()
 
@@ -28,13 +34,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val json = loadData("Niveles.json")
+        imgUpLeft = findViewById(R.id.image1)
+        imgUpRigth = findViewById(R.id.image2)
+        imgDownLeft = findViewById(R.id.image3)
+        imgDownRigth = findViewById(R.id.image4)
+        btnBorrar = findViewById(R.id.buttonBorrar)
 
         dataNiveles = gson.fromJson(json, Niveles::class.java)
-        Log.d("DATA", dataNiveles.niveles[0].respuesta)
+        Log.d("DATA", dataNiveles.niveles[nivelActual].respuesta)
 
-        btnBorrar = findViewById(R.id.buttonBorrar)
+
         btnBorrar.setOnClickListener {
             borrarRespuesta()
         }
@@ -67,8 +77,6 @@ class MainActivity : AppCompatActivity() {
         } else if (contador == 6) {
             borrarRespuesta()
         }
-
-
     }
 
     fun borrarRespuesta() {
@@ -85,11 +93,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun ganar() {
+        val json = loadData("Niveles.json")
+        dataNiveles = gson.fromJson(json, Niveles::class.java)
         AlertDialog.Builder(this)
             .setTitle("Ganador")
             .setMessage("Has encontrado la palabra correcta")
             .setPositiveButton(android.R.string.yes, DialogInterface.OnClickListener { dialog, which ->
                 //TODO: Implementar el cambio de niveles
+                var draw = "R.drawable."
+
+                nivelActual+=1;
+                imgUpLeft?.setImageURI(Uri.parse(draw + (dataNiveles.niveles[nivelActual].imagen1)))
+                imgUpRigth?.setImageResource(R.drawable.nivel2_2)
+                imgDownLeft?.setImageResource(R.drawable.nivel2_3)
+                imgDownRigth?.setImageResource(R.drawable.nivel2_4)
+
+
             })
             .show()
     }
