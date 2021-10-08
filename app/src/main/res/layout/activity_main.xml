@@ -10,7 +10,7 @@
         android:id="@+id/layoutPrincipal"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F1F6F9"
+        android:background="#81B214"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingTop="30dp"
@@ -41,10 +41,10 @@
                     android:id="@+id/image1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
                     android:contentDescription="@string/imageitem1"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/nivel1_1"
                     tools:ignore="ImageContrastCheck" />
 
@@ -52,10 +52,10 @@
                     android:id="@+id/image2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
                     android:contentDescription="@string/imageitem2"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/nivel1_2" />
             </TableRow>
 
@@ -69,20 +69,20 @@
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
                     android:contentDescription="@string/imageitem3"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/nivel1_3" />
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
                     android:contentDescription="@string/imageitem4"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/nivel1_4" />
             </TableRow>
 
@@ -112,7 +112,7 @@
                     android:text="A"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
                 <Button
@@ -125,7 +125,7 @@
                     android:text="N"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
                 <Button
@@ -138,7 +138,7 @@
                     android:text="I"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
                 <Button
@@ -151,7 +151,7 @@
                     android:text="M"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
                 <Button
@@ -164,7 +164,7 @@
                     android:text="A"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
                 <Button
@@ -177,7 +177,7 @@
                     android:text="L"
                     android:textColor="#000000"
                     app:backgroundTint="#00FFFFFF"
-                    app:strokeColor="#394867"
+                    app:strokeColor="#FFCC29"
                     app:strokeWidth="4dp" />
 
             </LinearLayout>
@@ -203,7 +203,7 @@
                         android:layout_margin="5dp"
                         android:text="M"
                         android:textColor="#F1F6F9"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button2"
@@ -212,7 +212,7 @@
                         android:layout_margin="5dp"
                         android:text="B"
                         android:textColor="#F1F6F9"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button3"
@@ -221,7 +221,7 @@
                         android:layout_margin="5dp"
                         android:text="J"
                         android:textColor="#F1F6F9"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button4"
@@ -230,7 +230,7 @@
                         android:layout_margin="5dp"
                         android:text="O"
                         android:textColor="#F1F6F9"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button5"
@@ -239,7 +239,7 @@
                         android:layout_margin="5dp"
                         android:text="L"
                         android:textColor="#F1F6F9"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                 </TableRow>
 
@@ -256,7 +256,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="S"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button7"
@@ -264,7 +264,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="A"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button8"
@@ -272,7 +272,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="T"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button9"
@@ -280,7 +280,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="R"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
                 </TableRow>
 
                 <TableRow
@@ -297,7 +297,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="C"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button11"
@@ -305,7 +305,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="A"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                     <Button
                         android:id="@+id/button12"
@@ -313,7 +313,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:text="S"
-                        app:backgroundTint="#14274E" />
+                        app:backgroundTint="#206A5D" />
 
                 </TableRow>
             </TableLayout>
