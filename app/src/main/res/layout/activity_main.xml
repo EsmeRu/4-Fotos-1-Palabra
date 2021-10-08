@@ -45,7 +45,7 @@
                     android:contentDescription="@string/imageitem1"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    app:srcCompat="@mipmap/mascota1_foreground"
+                    app:srcCompat="@drawable/nivel1_1"
                     tools:ignore="ImageContrastCheck" />
 
                 <ImageView
@@ -56,7 +56,7 @@
                     android:contentDescription="@string/imageitem2"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    app:srcCompat="@mipmap/mascota2_foreground" />
+                    app:srcCompat="@drawable/nivel1_2" />
             </TableRow>
 
             <TableRow
@@ -73,7 +73,7 @@
                     android:contentDescription="@string/imageitem3"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    app:srcCompat="@mipmap/mascota3_foreground" />
+                    app:srcCompat="@drawable/nivel1_3" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -83,7 +83,7 @@
                     android:contentDescription="@string/imageitem4"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    app:srcCompat="@mipmap/mascota4_foreground" />
+                    app:srcCompat="@drawable/nivel1_4" />
             </TableRow>
 
         </TableLayout>
