@@ -195,7 +195,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="M"
                         android:onClick="buttonPressed"
                         android:textColor="#F1F6F9"
                         app:backgroundTint="#206A5D" />
@@ -205,7 +204,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="B"
                         android:onClick="buttonPressed"
                         android:textColor="#F1F6F9"
                         app:backgroundTint="#206A5D" />
@@ -215,7 +213,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="N"
                         android:onClick="buttonPressed"
                         android:textColor="#F1F6F9"
                         app:backgroundTint="#206A5D" />
@@ -226,7 +223,6 @@
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:onClick="buttonPressed"
-                        android:text="O"
                         android:textColor="#F1F6F9"
                         android:visibility="visible"
                         app:backgroundTint="#206A5D" />
@@ -245,7 +241,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="S"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -254,7 +249,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="A"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -263,7 +257,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="T"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -272,7 +265,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="I"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -299,7 +291,6 @@
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="C"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -308,7 +299,6 @@
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="A"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -317,7 +307,6 @@
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="P"
                         android:onClick="buttonPressed"
                         app:backgroundTint="#206A5D" />
 
@@ -326,7 +315,6 @@
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
-                        android:text="L"
                         android:onClick="buttonPressed"
                         android:textColor="#F1F6F9"
                         app:backgroundTint="#206A5D" />

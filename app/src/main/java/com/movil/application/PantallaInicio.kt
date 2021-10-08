@@ -43,7 +43,7 @@ class PantallaInicio : AppCompatActivity() {
             .setTitle("Como Jugar")
             .setMessage("1. Aparecerán 4 imagenes, todas ellas tienen una palbra en común \n\n" +
                         "2. Toque las letras para contruir la palabra correcta \n\n" +
-                        "3. Toque las letras previamente seleccionadas para quitarlas de la palabra que esta contruyendo")
+                        "3. Si se equivoca en alguna letra al contruir la palabra correcta toque el boton rojo para borrar su seleccion de letras")
             .show()
     }
 }

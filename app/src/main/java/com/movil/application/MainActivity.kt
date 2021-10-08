@@ -1,6 +1,7 @@
 package com.movil.application
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -28,13 +29,15 @@ class MainActivity : AppCompatActivity() {
     private var imgDownRigth: ImageView? = null
     private var btnPresionados: ArrayList<Button> = ArrayList()
     private var btnRespuestas: ArrayList<Button> = ArrayList()
+    private var btnLetras: ArrayList<Button> = ArrayList()
+    lateinit var json: String
 
     //TODO: Obtener el nivel y las imagenes en funcion del nivel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val json = loadData("Niveles.json")
+        json = loadData("Niveles.json")
         imgUpLeft = findViewById(R.id.image1)
         imgUpRigth = findViewById(R.id.image2)
         imgDownLeft = findViewById(R.id.image3)
@@ -42,8 +45,8 @@ class MainActivity : AppCompatActivity() {
         btnBorrar = findViewById(R.id.buttonBorrar)
 
         dataNiveles = gson.fromJson(json, Niveles::class.java)
-        Log.d("DATA", dataNiveles.niveles[nivelActual].respuesta)
 
+        generarLetras()
 
         btnBorrar.setOnClickListener {
             borrarRespuesta()
@@ -92,23 +95,96 @@ class MainActivity : AppCompatActivity() {
         contador = 0
     }
 
-    fun ganar() {
-        val json = loadData("Niveles.json")
+    private fun ganar() {
         dataNiveles = gson.fromJson(json, Niveles::class.java)
-        AlertDialog.Builder(this)
-            .setTitle("Ganador")
-            .setMessage("Has encontrado la palabra correcta")
-            .setPositiveButton(android.R.string.yes, DialogInterface.OnClickListener { dialog, which ->
-                //TODO: Implementar el cambio de niveles
-                nivelActual+=1;
+        if(nivelActual != 9) {
+            AlertDialog.Builder(this)
+                .setTitle("Ganador")
+                .setMessage("Has encontrado la palabra correcta")
+                .setPositiveButton(android.R.string.yes, DialogInterface.OnClickListener { dialog, which ->
+                    //TODO: Implementar el cambio de niveles
+                    nivelActual+=1;
 
-                imgUpLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen1)))
-                imgUpRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen2)))
-                imgDownLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen3)))
-                imgDownRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen4)))
+                    imgUpLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen1)))
+                    imgUpRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen2)))
+                    imgDownLeft?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen3)))
+                    imgDownRigth?.setImageURI(Uri.parse("android.resource://com.movil.application/drawable/" + (dataNiveles.niveles[nivelActual].imagen4)))
 
-            })
-            .show()
+                    borrarRespuesta()
+                    btnLetras.add(findViewById(R.id.btnTecla1))
+                    btnLetras.add(findViewById(R.id.btnTecla2))
+                    btnLetras.add(findViewById(R.id.btnTecla3))
+                    btnLetras.add(findViewById(R.id.btnTecla4))
+                    btnLetras.add(findViewById(R.id.btnTecla5))
+                    btnLetras.add(findViewById(R.id.btnTecla6))
+                    btnLetras.add(findViewById(R.id.btnTecla7))
+                    btnLetras.add(findViewById(R.id.btnTecla8))
+                    btnLetras.add(findViewById(R.id.btnTecla9))
+                    btnLetras.add(findViewById(R.id.btnTecla10))
+                    btnLetras.add(findViewById(R.id.btnTecla11))
+                    btnLetras.add(findViewById(R.id.btnTecla12))
+
+                    for (letras in btnLetras){
+                        letras.text = ""
+                    }
+
+                    generarLetras()
+                })
+                .show()
+        } else {
+            AlertDialog.Builder(this)
+                .setTitle("Juego terminado")
+                .setMessage("Vaya, has terminado los 10 niveles del juego\nRegresaras a la pantalla de inicio")
+                .setPositiveButton(android.R.string.yes, DialogInterface.OnClickListener { dialog, which ->
+                    val intent: Intent = Intent(this, PantallaInicio::class.java)
+                    startActivity(intent)
+                    finish()
+                })
+                .setCancelable(false)
+                .show()
+        }
+
+    }
+
+    private fun generarLetras() {
+        val letrasCorrectas = dataNiveles.niveles[nivelActual].respuesta.chunked(1)
+        var letrasColocadas = 0
+        var letrasCorrectasVal = false
+        val random = '0'..'1'
+        val letrasRandom = 'A'..'Z'
+
+        btnLetras.add(findViewById(R.id.btnTecla1))
+        btnLetras.add(findViewById(R.id.btnTecla2))
+        btnLetras.add(findViewById(R.id.btnTecla3))
+        btnLetras.add(findViewById(R.id.btnTecla4))
+        btnLetras.add(findViewById(R.id.btnTecla5))
+        btnLetras.add(findViewById(R.id.btnTecla6))
+        btnLetras.add(findViewById(R.id.btnTecla7))
+        btnLetras.add(findViewById(R.id.btnTecla8))
+        btnLetras.add(findViewById(R.id.btnTecla9))
+        btnLetras.add(findViewById(R.id.btnTecla10))
+        btnLetras.add(findViewById(R.id.btnTecla11))
+        btnLetras.add(findViewById(R.id.btnTecla12))
+
+        while (!letrasCorrectasVal) {
+           for (letras in btnLetras) {
+               if(letras.text == "" && letrasColocadas != 6){
+                    if (random.random().toString() == "0"){
+                        letras.text = letrasCorrectas[letrasColocadas]
+                        letrasColocadas++
+                    }
+               }
+               if (letrasColocadas == 6) {
+                   letrasCorrectasVal = true
+               }
+           }
+        }
+
+        for(letras in btnLetras) {
+            if(letras.text == ""){
+                letras.text = letrasRandom.random().toString()
+            }
+        }
     }
 
     private fun loadData(inFile: String): String {
