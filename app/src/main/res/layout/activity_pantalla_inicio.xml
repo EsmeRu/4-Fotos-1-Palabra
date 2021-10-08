@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".PantallaInicio">
 
-<<<<<<< HEAD
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtVTitulo"
             android:layout_width="match_parent"
             android:layout_height="186dp"
             android:gravity="center"
@@ -29,21 +28,21 @@
             android:typeface="sans" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/btnJugar"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:text="JUGAR"
             app:backgroundTint="#14274E" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/btnInstrucciones"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:text="CÓMO JUGAR"
             app:backgroundTint="#14274E" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/btnSalir"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:gravity="center"
@@ -58,55 +57,4 @@
             android:text="Esmeralda Rubín Fausto\nChristian Alejandro Salas Inzunza\nAna Sofía Picos Gonález" />
 
     </LinearLayout>
-=======
-    <TextView
-        android:id="@+id/txtVTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:fontFamily="casual"
-        android:text="4 Fotos 1 Palabra"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnJugar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="JUGAR"
-        app:backgroundTint="#00BCD4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtVTitulo" />
-
-    <Button
-        android:id="@+id/btnInstrucciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="COMO JUGAR"
-        app:backgroundTint="#00BCD4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnJugar" />
-
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="SALIR"
-        app:backgroundTint="#00BCD4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInstrucciones" />
->>>>>>> 5e25538a6d00d9f7fb324d918ada64fec3fbafa4
 </androidx.constraintlayout.widget.ConstraintLayout>
